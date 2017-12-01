@@ -1,0 +1,38 @@
+{
+  "name": "odata2ojdl",
+  "version": "0.0.1",
+  "description": "Convert OData metadata document to JHipster Definition Language (JDL)",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && tsc --declaration --outDir dist --rootDir src",
+    "build:example": "rm -rf dist && mkdir dist && tsc --declaration --outDir dist --project example.tsconfig.json",
+    "start": "npm run build:example && node dist/example/index.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coopyrightdmin/odata2jdl.git"
+  },
+  "keywords": [
+    "odata",
+    "swagger",
+    "openapi"
+  ],
+  "author": "Jack Admin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Coopyrightdmin/odata2jdl/issues"
+  },
+  "homepage": "https://github.com/Coopyrightdmin/odata2jdl#readme",
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "xml2js": "^0.4.17"
+  }
+}
